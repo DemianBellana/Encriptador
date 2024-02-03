@@ -175,6 +175,12 @@ footer{
     footer {
         font-size: 17px;
     }
+
+    .cajaBtn{
+        inline-size: center;
+        margin: 0;
+         align-items: center;
+    }
 }
 
 @media only screen and (max-width: 653px){
@@ -193,6 +199,11 @@ footer{
    #imagenBlock{
     display: none;
    }
+   .cajaBtn{
+    inline-size: center;
+    margin: 0;
+     align-items: center;
+}
 }
 
 @media only screen and (max-width: 915px){

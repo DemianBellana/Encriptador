@@ -80,12 +80,28 @@ footer{
     display: none;
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 430px){
     main{
-        background: url(img/alura.jpg)center/cover no-repeat;
-        
+        background: url(img/aluracel.jpg)center/cover no-repeat;
         }
         h1{
             font-size: 17px;
         }
+        footer{
+            text-align: center;
+        }
+        h1{
+            font-size: 14px;
+        }
+
+}
+
+@media only screen and (max-width: 653px)
+{
+    #boton{
+        top: 70%;
+    }
+    h1{
+        font-size: 20px;
+    }
 }
