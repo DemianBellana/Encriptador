@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icono.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        
+        <h1>ENCRIPTADO Y DESENCRIPTADO</h1>
+        <img id="imagenAlura" src="img/Logo.png">
+        
+    </header>
+    
+    <main>
+        <div class="containerCaja"> 
+            <textarea id="textareEncriptador" class="cajaTexto" placeholder="ingrese su texto aqui"></textarea>
+            <textarea id="textareaDesencriptador" class="cajaTexto" placeholder="encriptado o desencriptado"></textarea> 
+            <img id="imagenBlock" src="img/1.png">
+        </div>
+        
+        <div class="cajaBtn">      
+            <button onclick="encriptar()" id="botonEncriptar" class="btn">Encriptar</button>
+            <button onclick="desencriptar()" id="botonDesencriptar" class="btn">Desencriptar</button>
+            <button onclick="copiar()" id="botonCopiar" class="btn">Copiar</button>
+        </div>
+        <script>
+            document.getElementById('textareEncriptador').addEventListener('input', function(event) {
+                // Obtén el valor actual del textarea
+                let textoOriginal = this.value;
+    
+                // Convierte todo el texto a minúsculas y elimina acentos
+                let textoModificado = textoOriginal.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    
+                // Actualiza el valor del textarea
+                this.value = textoModificado;
+            });
+        </script>
+    </main>
+    <footer>Demian Bellana - Oracle Next Education: GRUPO 6</footer>
+    <script src="app.js"></script>
+</body>
+</html>
