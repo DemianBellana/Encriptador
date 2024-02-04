@@ -32,7 +32,7 @@ header{
 }
 
 main{
-    height: 85vh;
+    height: 78vh;
     width: 100%;
     background: url(img/alura.jpg) center/cover no-repeat;
 }
@@ -67,7 +67,7 @@ display: none;
 
 
 footer{
-    height: 5vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     justify-content: center;
