@@ -25,8 +25,7 @@ function encriptar() {
         vuelta = vuelta + 1;
     }
 
-    // Aquí puedes hacer algo con el texto encriptado, como mostrarlo en otro lugar de tu página.
-    // Por ejemplo:
+   
     document.querySelector("#textareaDesencriptador").value = texto;
 }
     
@@ -39,16 +38,15 @@ function desencriptar() {
     let textareaDesencriptador = document.querySelector("#textareaDesencriptador");
     textareaDesencriptador.style.display = "block";
     
-    // Obtén el texto encriptado desde el textarea
+   
     let textoEncriptado = document.querySelector("#textareEncriptador").value;
 
-    // Inicializa las variables necesarias
     let vuelta = 0;
     let textoOriginal = "";
 
-    // Itera a través del texto encriptado
+    
     while (vuelta < textoEncriptado.length) {
-        // Verifica las combinaciones encriptadas y restáuralas
+        
         if (desencriptadoUsuario[vuelta] == "a" && textoEncriptado[vuelta + 1] == "i") {
             textoOriginal += "a";
             vuelta += 2;
@@ -65,20 +63,20 @@ function desencriptar() {
             textoOriginal += "u";
             vuelta += 4;
         } else {
-            // Si no es una combinación encriptada, simplemente añádelo al texto original
+            
             textoOriginal += textoEncriptado[vuelta];
             vuelta += 1;
         }
     }
 
-    // Muestra el texto desencriptado
+    
     document.querySelector("#textareaDesencriptador").value = textoOriginal;
 }
 
 function copiar() {
     let textoDesencriptado = document.querySelector("#textareaDesencriptador").value;
 
-    // Utiliza el método writeText para copiar el contenido al portapapeles
+    
     navigator.clipboard.writeText(textoDesencriptado)
         .then(() => {
             alert("Texto copiado exitosamente")

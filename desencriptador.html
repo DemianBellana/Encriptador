@@ -29,13 +29,13 @@
         </div>
         <script>
             document.getElementById('textareEncriptador').addEventListener('input', function(event) {
-                // Obtén el valor actual del textarea
+                
                 let textoOriginal = this.value;
     
-                // Convierte todo el texto a minúsculas y elimina acentos
+                
                 let textoModificado = textoOriginal.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     
-                // Actualiza el valor del textarea
+                
                 this.value = textoModificado;
             });
         </script>
