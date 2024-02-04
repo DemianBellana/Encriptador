@@ -105,6 +105,11 @@ footer{
         font-size: 20px;
     }
     
+    footer{
+        height: 12vh;}
+        main{
+            height: 78vh;
+            }
 }
 @media only screen and (max-width: 500px){
 main{

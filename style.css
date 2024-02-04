@@ -71,11 +71,11 @@ main{
 
 img{
     
-    height: 350px;
+    height: 330px;
     object-fit: cover;
     border-radius: 8px;
     border: solid;
-    width: 199px;
+    width: 185px;
 }
 
 .cajaBtn{
@@ -175,7 +175,8 @@ footer{
     footer {
         font-size: 17px;
     }
-
+    footer{
+        text-align: center;}
     .cajaBtn{
         inline-size: center;
         margin: 0;
@@ -184,26 +185,30 @@ footer{
 }
 
 @media only screen and (max-width: 653px){
-    #imagenAlura{
+    #imagenBlock{
         display: none;
     }
+    
     #textareEncriptador,#textareaDesencriptador{
-        height: 160px;
-
+        height: 133px;
+       
     }
     
     footer{
-        padding-top: 0;
-        font-size: 12px;
+        height: 12vh;
     }
-   #imagenBlock{
-    display: none;
-   }
+     main{
+           height: 78vh;
+         }
+    #imagenBlock{
+        display: none;
+                 }
+
    .cajaBtn{
     inline-size: center;
     margin: 0;
      align-items: center;
-}
+    }
 }
 
 @media only screen and (max-width: 915px){
