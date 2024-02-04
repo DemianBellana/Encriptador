@@ -70,12 +70,12 @@ main{
 }
 
 img{
-    width: 300px;
+    
     height: 350px;
     object-fit: cover;
     border-radius: 8px;
     border: solid;
-    
+    width: 199px;
 }
 
 .cajaBtn{

@@ -80,6 +80,8 @@ function copiar() {
 
     // Utiliza el método writeText para copiar el contenido al portapapeles
     navigator.clipboard.writeText(textoDesencriptado)
+        .then(() => {
+            alert("Texto copiado exitosamente")
+        });
 
-    alert("Texto copiado Exitosamente")
 }

@@ -104,4 +104,10 @@ footer{
     h1{
         font-size: 20px;
     }
+    
+}
+@media only screen and (max-width: 500px){
+main{
+    background: url(img/aluracel.jpg)center/cover no-repeat;
+    }
 }
