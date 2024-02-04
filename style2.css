@@ -73,7 +73,7 @@ footer{
     justify-content: center;
     background-color: beige;
     font-size: 15px;
- 
+    align-items: center;
 }
 
 #imagenAlura{
