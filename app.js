@@ -5,6 +5,17 @@ document.getElementById('textareEncriptador').addEventListener('input', function
     this.value = textoModificado;
 });
 
+/* ELIMINA CARACTERES ESPECIALES */
+document.getElementById('textareEncriptador').addEventListener('keypress', function(event) {
+    const caracteresPermitidos = /^[a-zA-Z0-9\s]*$/;
+    const teclaPresionada = String.fromCharCode(event.keyCode);
+
+    // Verifica si la tecla presionada no está permitida
+    if (!caracteresPermitidos.test(teclaPresionada)) {
+        event.preventDefault(); // Evita que se escriba el carácter
+    }
+});
+
 /* BOTON ECNCRIPTAR */
 function encriptar() {
     let encriptadoUsuario = document.querySelector("#textareEncriptador").value;
