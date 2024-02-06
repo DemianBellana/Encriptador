@@ -15,7 +15,7 @@
     
     <main>
         <div class="containerCaja"> 
-            <textarea id="textareEncriptador" class="cajaTexto" placeholder="solo letras minuscula y sin acentos"></textarea>
+            <textarea id="textareEncriptador" class="cajaTexto" placeholder="solo letras minuscula y sin acentos" onkeypress="return ( event.charCode >= 32 && event.charCode <= 47 || event.charCode >= 97 && event.charCode <= 122)"></textarea>
             <textarea id="textareaDesencriptador" class="cajaTexto" placeholder="encriptado o desencriptado" readonly></textarea> 
             <img id="imagenBlock" src="img/1.png">
         </div>
