@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styledecencriptador.css">
     <link rel="icon" href="img/icono.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        
         <h1>ENCRIPTADO Y DESENCRIPTADO</h1>
-        <img id="imagenAlura" src="img/Logo.png">
-        
+        <img id="imagenAlura" src="img/Logo.png">     
     </header>
     
     <main>
@@ -27,18 +25,6 @@
             <button onclick="desencriptar()" id="botonDesencriptar" class="btn">Desencriptar</button>
             <button onclick="copiar()" id="botonCopiar" class="btn">Copiar</button>
         </div>
-        <script>
-            document.getElementById('textareEncriptador').addEventListener('input', function(event) {
-                
-                let textoOriginal = this.value;
-    
-                
-                let textoModificado = textoOriginal.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    
-                
-                this.value = textoModificado;
-            });
-        </script>
     </main>
     <footer>Demian Bellana - Oracle Next Education: GRUPO 6</footer>
     <script src="app.js"></script>

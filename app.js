@@ -1,3 +1,11 @@
+/* LETRAS EN MINUSCULAS SIN ACENTOS Y SIN CARACTER ESPECIAL  */
+document.getElementById('textareEncriptador').addEventListener('input', function(event) {
+    let textoOriginal = this.value;  
+    let textoModificado = textoOriginal.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    this.value = textoModificado;
+});
+
+/* BOTON ECNCRIPTAR */
 function encriptar() {
     let encriptadoUsuario = document.querySelector("#textareEncriptador").value;
     let imagenBlock = document.querySelector("#imagenBlock");
@@ -7,7 +15,7 @@ function encriptar() {
 
     let vuelta = 0;
     let texto = "";
-
+                /* WHILE ENCRIPTADO*/ 
     while (vuelta != encriptadoUsuario.length) {
         if (encriptadoUsuario[vuelta] == "a") {
             texto = texto + "ai";
@@ -25,12 +33,11 @@ function encriptar() {
         vuelta = vuelta + 1;
     }
 
-   
+        /* TEXTO ENCRIPTADO SALE EN TEXTAREADESENCRIPTTADOR */
     document.querySelector("#textareaDesencriptador").value = texto;
 }
     
-
-
+    /* BOTON DESENCRIPTAR */ 
 function desencriptar() {
     let desencriptadoUsuario = document.querySelector("#textareEncriptador").value;
     let imagenBlock = document.querySelector("#imagenBlock");
@@ -44,7 +51,7 @@ function desencriptar() {
     let vuelta = 0;
     let textoOriginal = "";
 
-    
+    /* WHILE DE BOTON DESENCRIPTADOR  */
     while (vuelta < textoEncriptado.length) {
         
         if (desencriptadoUsuario[vuelta] == "a" && textoEncriptado[vuelta + 1] == "i") {
@@ -69,17 +76,16 @@ function desencriptar() {
         }
     }
 
-    
+    /* DEVUELVE EL TEXTO DESENCRIPTADO EN TEXTAREADESENCRIPTADOR */
     document.querySelector("#textareaDesencriptador").value = textoOriginal;
 }
 
+/* FUNCION COPIAR  */
 function copiar() {
-    let textoDesencriptado = document.querySelector("#textareaDesencriptador").value;
-
-    
-    navigator.clipboard.writeText(textoDesencriptado)
-        .then(() => {
-            alert("Texto copiado exitosamente")
+     let textoDesencriptado = document.querySelector("#textareaDesencriptador").value;
+     navigator.clipboard.writeText(textoDesencriptado)
+    .then(() => {
+     alert("texto copiado exitosamente")
         });
 
 }

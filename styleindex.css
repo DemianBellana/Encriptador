@@ -79,21 +79,7 @@ footer{
     display: none;
 }
 
-@media only screen and (max-width: 430px){
-    main{
-        background: url(img/aluracel.jpg)center/cover no-repeat;
-        }
-        h1{
-            font-size: 17px;
-        }
-        footer{
-            text-align: center;
-        }
-        h1{
-            font-size: 14px;
-        }
-
-}
+/* MEDIAS QUERY */
 
 @media only screen and (max-width: 653px)
 {
@@ -110,8 +96,29 @@ footer{
             height: 78vh;
             }
 }
+
+
 @media only screen and (max-width: 500px){
-main{
-    background: url(img/aluracel.jpg)center/cover no-repeat;
+    main{
+        background: url(img/aluracel.jpg)center/cover no-repeat;
+        }
     }
+
+
+@media only screen and (max-width: 430px){
+    main{
+        background: url(img/aluracel.jpg)center/cover no-repeat;
+        }
+        h1{
+            font-size: 17px;
+        }
+        footer{
+            text-align: center;
+        }
+        h1{
+            font-size: 14px;
+        }
+
 }
+
+
