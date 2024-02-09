@@ -1,24 +1,16 @@
+/* variable para elemento textare  */
+const textArea = document.getElementById("textareEncriptador");
+    
+
 /* LETRAS EN MINUSCULAS SIN ACENTOS Y SIN CARACTER ESPECIAL  */
 document.getElementById('textareEncriptador').addEventListener('input', function(event) {
-    let textoOriginal = this.value;  
-    let textoModificado = textoOriginal.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    this.value = textoModificado;
+    textArea.value = textArea.value.replace(/[^a-z\s]/g, '');
 });
 
-/* ELIMINA CARACTERES ESPECIALES */
-document.getElementById('textareEncriptador').addEventListener('keypress', function(event) {
-    const caracteresPermitidos = /^[a-zA-Z0-9\s]*$/;
-    const teclaPresionada = String.fromCharCode(event.keyCode);
-
-    // Verifica si la tecla presionada no está permitida
-    if (!caracteresPermitidos.test(teclaPresionada)) {
-        event.preventDefault(); // Evita que se escriba el carácter
-    }
-});
 
 /* BOTON ECNCRIPTAR */
-function encriptar() {
-    let encriptadoUsuario = document.querySelector("#textareEncriptador").value;
+    function encriptar() {
+    let encriptadoUsuario = textArea.value;
     let imagenBlock = document.querySelector("#imagenBlock");
     imagenBlock.style.display = "none";
     let textareaDesencriptador = document.querySelector("#textareaDesencriptador");
